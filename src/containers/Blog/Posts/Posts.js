@@ -10,6 +10,7 @@ class Posts extends Component{
     }
 
     componentDidMount(){
+        console.log(this.props);
         axios.get('https://jsonplaceholder.typicode.com/posts')
             .then(response => {
                 console.log(response)
@@ -41,6 +42,7 @@ class Posts extends Component{
                 key={post.id} 
                 title={post.title} 
                 author={post.author}
+                //{...this.props}
                 clicked={() => this.postSelectedHandler(post.id)}/>
             })
         } 

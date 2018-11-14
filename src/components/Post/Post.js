@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './Post.css';
 
-const post = (props) => {
-    return(
+
+const post = (props) => (
         
         <div className={classes.Post} onClick={props.clicked}>
             <div className={classes.Title}>{props.title}</div>
@@ -12,6 +12,6 @@ const post = (props) => {
         
         
     );
-}
+
 
 export default post;
